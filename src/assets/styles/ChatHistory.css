@@ -1,0 +1,238 @@
+/* ============================================================
+   CHAT HISTORY
+   ============================================================ */
+
+.chat-history {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 0;
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.chat-history-title {
+  padding: 8px 10px;
+
+  color: #9ca3af;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+}
+
+
+/* ============================================================
+   HISTORY LIST
+   ============================================================ */
+
+.chat-history-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+
+  max-height: 300px;
+
+  overflow-y: auto;
+
+  padding-right: 3px;
+}
+
+
+/* ============================================================
+   HISTORY ITEM
+   ============================================================ */
+
+.chat-history-item {
+  width: 100%;
+  min-height: 42px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 10px;
+
+  border: none;
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #374151;
+
+  font-family: inherit;
+  font-size: 13px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* ============================================================
+   HOVER
+   ============================================================ */
+
+.chat-history-item:hover {
+  background: #f3f4f6;
+
+  color: #111827;
+}
+
+
+/* ============================================================
+   ACTIVE CHAT
+   ============================================================ */
+
+.chat-history-item.active {
+  background: #eef2ff;
+
+  color: #111827;
+
+  font-weight: 600;
+}
+
+.chat-history-item.active:hover {
+  background: #e5e7ff;
+}
+
+
+/* ============================================================
+   ICON
+   ============================================================ */
+
+.chat-history-icon {
+  width: 28px;
+  min-width: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 6px;
+
+  font-size: 15px;
+}
+
+
+/* ============================================================
+   CHAT TITLE
+   ============================================================ */
+
+.chat-history-text {
+  flex: 1;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+}
+
+
+/* ============================================================
+   EMPTY
+   ============================================================ */
+
+.chat-history-empty {
+  padding: 14px 10px;
+
+  color: #9ca3af;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.chat-history-loading {
+  padding: 14px 10px;
+
+  color: #9ca3af;
+
+  font-size: 13px;
+
+  text-align: center;
+}
+
+
+/* ============================================================
+   SCROLLBAR
+   ============================================================ */
+
+.chat-history-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chat-history-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-history-list::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+
+  border-radius: 10px;
+}
+
+.chat-history-list::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 768px) {
+
+  .chat-history-title {
+    padding: 7px 8px;
+  }
+
+  .chat-history-item {
+    min-height: 44px;
+
+    padding: 0 9px;
+  }
+
+  .chat-history-list {
+    max-height: 250px;
+  }
+
+}
+
+
+/* ============================================================
+   SMALL MOBILE
+   ============================================================ */
+
+@media (max-width: 480px) {
+
+  .chat-history-item {
+    min-height: 42px;
+
+    font-size: 13px;
+  }
+
+  .chat-history-list {
+    max-height: 220px;
+  }
+
+}

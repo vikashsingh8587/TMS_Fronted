@@ -1,0 +1,614 @@
+.sidebar {
+  width: 270px;
+  height: 100vh;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #172554;
+
+  color: white;
+
+  z-index: 1000;
+
+  transition:
+    width 0.25s ease,
+    transform 0.25s ease;
+
+  overflow: hidden;
+}
+
+
+/* =================================
+   HEADER
+================================= */
+
+.sidebar-header {
+  height: 80px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  padding: 15px;
+
+  gap: 12px;
+}
+
+.logo-button {
+  width: 50px;
+  height: 50px;
+
+  flex-shrink: 0;
+
+  border: none;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo-button img {
+  width: 48px;
+  height: 48px;
+
+  object-fit: contain;
+
+  border-radius: 12px;
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+
+/* =================================
+   MOBILE CLOSE
+================================= */
+
+.mobile-close-btn {
+  display: none;
+
+  margin-left: auto;
+
+  width: 38px;
+  height: 38px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.1);
+
+  color: white;
+
+  font-size: 25px;
+
+  cursor: pointer;
+}
+
+
+/* =================================
+   BODY
+================================= */
+
+.sidebar-body {
+  flex: 1;
+
+  min-height: 0;
+
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+
+/* =================================
+   NEW CHAT
+================================= */
+
+.new-chat-btn {
+  width: 100%;
+  height: 52px;
+
+  flex-shrink: 0;
+
+  border: none;
+  border-radius: 14px;
+
+  background: #22b8f0;
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 8px;
+
+  transition: 0.2s;
+}
+
+.new-chat-btn:hover {
+  background: #0ea5e9;
+}
+
+.new-chat-icon {
+  font-size: 23px;
+}
+
+
+/* =================================
+   MENU
+================================= */
+
+.sidebar-menu {
+  margin-top: 28px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.menu-item {
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 0 12px;
+
+  text-align: left;
+
+  transition: 0.2s;
+}
+
+.menu-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.menu-icon {
+  width: 25px;
+
+  text-align: center;
+
+  font-size: 18px;
+}
+
+
+/* =================================
+   CHAT HISTORY
+================================= */
+
+.chat-history {
+  flex: 1;
+
+  min-height: 0;
+
+  margin-top: 18px;
+
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+
+/* =================================
+   RECENT CHATS TITLE
+================================= */
+
+.chat-history-title {
+  flex-shrink: 0;
+
+  padding: 5px 10px 10px;
+
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =================================
+   CHAT HISTORY ITEM
+================================= */
+
+.history-item {
+  width: 100%;
+
+  min-height: 42px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 10px;
+
+  margin-bottom: 3px;
+
+  border: none;
+
+  border-radius: 9px;
+
+  background: transparent;
+
+  color: #e2e8f0;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+
+/* =================================
+   CHAT HISTORY HOVER
+================================= */
+
+.history-item:hover {
+  background: rgba(255, 255, 255, 0.10);
+
+  color: #ffffff;
+}
+
+
+/* =================================
+   ACTIVE CHAT
+================================= */
+
+.history-item-active {
+  background: rgba(34, 184, 240, 0.18);
+
+  color: #ffffff;
+
+  font-weight: 600;
+
+  box-shadow: inset 3px 0 0 #22b8f0;
+}
+
+.history-item-active:hover {
+  background: rgba(34, 184, 240, 0.25);
+}
+
+
+/* =================================
+   HISTORY ICON
+================================= */
+
+.history-icon {
+  width: 26px;
+
+  min-width: 26px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-right: 6px;
+
+  font-size: 14px;
+}
+
+
+/* =================================
+   HISTORY TITLE
+================================= */
+
+.history-title {
+  flex: 1;
+
+  min-width: 0;
+
+  overflow: hidden;
+
+  white-space: nowrap;
+
+  text-overflow: ellipsis;
+
+  color: inherit;
+}
+
+
+/* =================================
+   HISTORY SCROLL
+================================= */
+
+.chat-history .history-item:first-of-type {
+  margin-top: 0;
+}
+
+
+/*
+   Important:
+   Sirf history items scroll honge.
+*/
+
+.chat-history {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+
+/* =================================
+   HISTORY SCROLLBAR
+================================= */
+
+.chat-history::-webkit-scrollbar {
+  width: 5px;
+}
+
+.chat-history::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.chat-history::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+
+  border-radius: 10px;
+}
+
+.chat-history::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* =================================
+   NO CHATS
+================================= */
+
+.no-chats {
+  padding: 10px;
+
+  color: rgba(255, 255, 255, 0.55);
+
+  font-size: 13px;
+}
+
+
+/* =================================
+   USER
+================================= */
+
+.sidebar-user {
+  height: 75px;
+
+  flex-shrink: 0;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+
+  padding: 12px 18px;
+
+  gap: 12px;
+
+  background: #172554;
+}
+
+.user-avatar {
+  width: 42px;
+  height: 42px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #38bdf8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  font-weight: bold;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.user-info strong {
+  font-size: 14px;
+}
+
+.user-info span {
+  font-size: 12px;
+
+  color: #cbd5e1;
+}
+
+/* =================================
+   SIDEBAR ACTIVE STATES
+================================= */
+
+.new-chat-btn.sidebar-active {
+  background: #0ea5e9;
+}
+
+
+/* =================================
+   ACTIVE MENU
+================================= */
+
+.menu-item-active {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.menu-item-active:hover {
+  background: rgba(255, 255, 255, 0.16);
+}
+
+
+/* =================================
+   CHAT HISTORY CONTAINER
+================================= */
+
+.sidebar-chat-history {
+  flex: 1;
+
+  min-height: 0;
+
+  margin-top: 18px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =================================
+   CHAT HISTORY SCROLL
+================================= */
+
+.sidebar-chat-history .chat-history {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* =================================
+   HISTORY LIST
+================================= */
+
+.sidebar-chat-history .chat-history-list {
+  flex: 1;
+
+  min-height: 0;
+
+  overflow-y: auto;
+
+  padding-right: 4px;
+}
+
+
+/* =================================
+   SCROLLBAR
+================================= */
+
+.sidebar-chat-history
+.chat-history-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar-chat-history
+.chat-history-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.sidebar-chat-history
+.chat-history-list::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.25);
+
+  border-radius: 10px;
+}
+
+.sidebar-chat-history
+.chat-history-list::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+  .sidebar {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 280px;
+    height: 100vh;
+
+    transform: translateX(-100%);
+
+    box-shadow:
+      8px 0 30px rgba(0, 0, 0, 0.35);
+  }
+
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+  }
+
+  .sidebar.sidebar-closed {
+    transform: translateX(-100%);
+  }
+
+  .mobile-close-btn {
+    display: block;
+  }
+
+}
+
+
+/* =================================
+   SMALL MOBILE
+================================= */
+
+@media (max-width: 380px) {
+
+  .sidebar {
+    width: 260px;
+  }
+
+}
